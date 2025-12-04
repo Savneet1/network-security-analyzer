@@ -1,0 +1,20 @@
+network-security-analyzer/
+├── README.md
+├── requirements.txt
+├── setup.sh
+├── scanner.py                 # Main CLI entry point
+├── config.py                  # Configuration and constants
+├── modules/
+│   ├── __init__.py
+│   ├── port_scanner.py        # Multi-threaded TCP port scanning
+│   ├── service_detection.py   # Banner grabbing + fingerprinting
+│   ├── os_detection.py        # TTL/TCP stack OS fingerprinting
+│   ├── firewall_detection.py  # Firewall behavior inference
+│   ├── topology_mapper.py     # Network topology mapping
+│   └── vuln_correlator.py     # NVD CVE correlation
+├── reports/
+│   ├── __init__.py
+│   ├── json_reporter.py       # JSON export
+│   └── html_reporter.py       # HTML report generation
+└── data/
+    └── service_signatures.json # Service fingerprint database
